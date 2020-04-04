@@ -88,3 +88,189 @@ To add a link, using element ```<a>``` with attribute ```<href>``` to stand for 
 ```
     <a href="https://google.com">Google Search</a>
 ``` 
+
+### Description List 
+```<dl/>``` is the *description list*, ```<dt/>``` is the *description title*, ```<dd/>``` is the *description description*. 
+```
+    <!-- description list -->
+    <dl> 
+        <dt><b>Small</b></dt> <!-- description title -->
+        <!-- description description-->
+        <dd>
+            This is the small. 
+        </dd>
+        <dt><b>Medium</b></dt> <!-- description title -->
+        <!-- description description-->
+        <dd>
+            This is the medium. 
+        </dd>
+        <dt><b>Large</b></dt> <!-- description title -->
+        <!-- description description-->
+        <dd>
+            This is the large. 
+        </dd>
+    </dl>
+``` 
+
+### Footer 
+```
+    <footer> 
+        <p>@Copyright 2045.</p>
+    </footer>
+```
+
+### Non-semantic wrappers 
+ Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with some CSS or JavaScript. Use ```<div>``` and ```<span>``` elements to acheive this. You should preferably with a suitable ```class``` attributes, to provide some kind of label for them so they can easily targeted. 
+
+#### ```<span>```
+ ```<span/>``` is an inline non-semantic element, which you should only use if you can't think of a better semantic text element to wrap your content, or don't want to add any specific meaning.
+
+ e.g. 
+ ```
+   <p>The King walked drunkenly back to his room at 01:00, the beer doing nothing to aid
+       him as he staggered through the door 
+       <span class="editor-note">[Editor's note: At this point in the play, the lights should be down low]</span>.
+    </p>
+ ```
+ In this case, the editor's note is supposed to merely provide extra direction for the director of the play; it is not supposed to have extra semantic meaning. For sighted users, CSS would perhaps be used to distance the note slightly from the main text.
+
+
+ #### ```<div>``` 
+ ```<div>``` is a block level non-semantic element, which you should only use if you can't think of a better semantic block element to use, or don't want to add any specific meaning. 
+
+ ### Line breaks and horizontal rules 
+ #### ```<br>```
+ ```<br>``` creates a line break in a paragraph; it is the only way to force a rigid structure in a situation where you want a series of fixed short lines, such as in a postal address or a poem. Without the ```<br>``` elements, the paragraph would just be rendered in one long line
+ ```
+    <p>There once was a man named O'Dell<br>
+    Who loved to write HTML<br>
+    But his structure was bad, his semantics were sad<br>
+    and his markup didn't read very well.</p>
+ ```
+
+#### ```<hr>```
+```<hr>``` elements create a horizontal rule in the document that denotes a thematic change in the text (such as a change in topic or scene). Visually it just looks like a horizontal line. 
+```
+<p>Ron was backed into a corner by the marauding netherbeasts. Scared, but determined to protect his friends, he raised his wand and prepared to do battle, hoping that his distress call had made it through.</p>
+<hr>
+<p>Meanwhile, Harry was sitting at home, staring at his royalty statement and pondering when the next spin off series would come out, when an enchanted distress letter flew through his window and landed in his lap. He read it hazily and sighed; "better get back to work then", he mused.</p>``
+```
+
+### Tables 
+Table is a table. Every table is enclosed by the ```<table>```. The ```<td>``` is the so-called *table data* is the cell that you can put data in it. 
+
+A row of four cells, all ```<td>``` makes a row of cells. 
+```
+    <td>First Cell</td> 
+    <td>Second Cell</td> 
+    <td>Third Cell</td> 
+    <td>Fourth Cell</td> 
+```
+To create multiple rows, use ```<tr>``` which means *table row*.  
+```
+   <tr>
+     <th>&nbsp;</th>
+     <th>Col 1</th>
+     <th>Col 2</th>
+     <th>Col 3</th>
+   </tr>
+   <tr>
+     <td>Row 1</td>
+     <td>[1,1]</td>
+     <td>[1,2]</td>
+     <td>[1,3]</td>
+   </tr>
+   <tr>
+     <td>Row 2</td>
+     <td>[2,1]</td>
+     <td>[2,2]</td>
+     <td>[2,3]</td>
+   </tr>
+```
+Adding the headers with ```<th>``` elements on tables. 
+```
+    <table>
+       <tr>
+         <th>&nbsp;</th>
+         <th>Col 1</th>
+         <th>Col 2</th>
+         <th>Col 3</th>
+       </tr>
+       <tr>
+         <td>Row 1</td>
+         <td>[1,1]</td>
+         <td>[1,2]</td>
+         <td>[1,3]</td>
+       </tr>
+       <tr>
+         <td>Row 2</td>
+         <td>[2,1]</td>
+         <td>[2,2]</td>
+         <td>[2,3]</td>
+       </tr>
+    </table>
+```
+To add a description of the table elements, you need to put the tag ```<caption>``` under the ```<table>```. 
+```
+   <table>
+       <caption>Coordinates</caption>
+       <tr>
+         <th>&nbsp;</th>
+         <th>Col 1</th>
+         <th>Col 2</th>
+         <th>Col 3</th>
+       </tr>
+       <tr>
+         <td>Row 1</td>
+         <td>[1,1]</td>
+         <td>[1,2]</td>
+         <td>[1,3]</td>
+       </tr>
+       <tr>
+         <td>Row 2</td>
+         <td>[2,1]</td>
+         <td>[2,2]</td>
+         <td>[2,3]</td>
+       </tr>
+   </table>
+```
+
+More info of Table can check [HERE](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced).
+
+### Form 
+The forms are wrapped with the tag ```<form>``` like, 
+``` 
+    <form action = "/myformdata" method="post">
+    </form> 
+``` 
+All of its attributes are optional, but it's standard practice to always set at least the action and method attributes
+
+```<action>``` attribute defines the location <URL> where the form's collected data should be sent when it's submitted. 
+
+```<method>``` attribute defines the HTTP method. 
+
+
+```
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+         <li>
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="user_name">
+         </li>
+         <li>
+           <label for="mail">E-mail:</label>
+           <input type="email" id="mail" name="user_email">
+         </li>
+         <li>
+           <label for="msg">Message:</label>
+           <textarea id="msg" name="user_message"></textarea>
+         </li>
+        </ul>
+    </form>
+```
+* ```<textarea>``` is the input feild for the multiline text feild.  if you want to define a default value for a ```<textarea>```, you put it between the opening and closing tags of the ```<textarea>``` element
+* Use of the ```for``` attribute on all ```<label>``` elements, which takes as its value the id of the form control with which it is associated — this is how you associate a form with its label.
+
+
+
+[REFERENCE](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)

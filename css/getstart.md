@@ -7,7 +7,27 @@
     }
 ``` 
 ```p``` means paragraph. 
-並放置在```html```中的```<head>```之中, ``` <link href = "../css/style.css" rel="stylesheet" type="text/css"> 
+* External Stylesheet 
+
+    並放置在```html```中的```<head>```之中, ```<link href = "../css/style.css" rel="stylesheet" type="text/css">``` 
+
+* Internal Stylesheet 
+
+    直接將css程式碼放在```<head>```中並用```<style>```包裝起來 
+    ```
+        <style>
+            p{
+                color: red; 
+            }
+        </style>
+    ```
+
+* Inline styles 
+
+    Embeded in the HTML element using ```style``` attribute. Do not do this unless you have to.  
+    ```
+        <p style="color:red;">ABC</p> 
+    ```
 
 ## Analysis 
 ```
@@ -43,3 +63,53 @@ The code above is the so-called **rule set**(規則集).
 ```
 All of the selector above are *element selector* until now. 
 ![Other selectors](./diff_selector.png) 
+
+
+### Others 
+Specific the class 
+```
+    .special { 
+        color : blue; 
+        font-weight : bold; 
+    }
+```
+This means that any elements that contains the class name ```special``` will use the style that defined above. 
+
+```
+    li.special { 
+        color : blue; 
+        font-weight : bold; 
+    } 
+```
+This means that target any ```li``` element that a class of ```special``` will use the style that definde above. 
+
+```
+    li em { 
+        color : blue; 
+        font-weight : bold; 
+    } 
+```
+This means that this selector ```li``` will select any ```<em>``` element that is inside an ```<li>```. 
+
+
+```
+    h1 + p { 
+        color : blue; 
+        font-weight : bold; 
+    } 
+```
+This means that targeting the ```<p>``` elements that follow the ```<h1>``` directory. 
+
+
+```
+    body h1 + p .special {
+        color: yellow;
+        background-color: black;
+        padding: 5px;
+    }
+```
+This will style any element with a class of special, which is inside a ```<p>```, which comes just after an ```<h1>```, which is inside a ```<body>```. 
+
+
+## How Does CSS Actually Do? 
+[REFERENCE](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works)<br> 
