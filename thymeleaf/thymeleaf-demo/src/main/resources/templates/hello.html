@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>Thymeleaf Demo</title>
+</head>
+<body> 
+    <main role="main" class="container">
+        <div class="starter-template">
+            <h1>Spring Boot Web Thymeleaf</h1>
+            <h2> 
+                <span th:text="'Hello'">ABC</span> <!-- replace ABC with Hello-->
+            </h2>
+            <h2> 
+                <!-- 
+                <span th:text="#{app.hello}"></span> 
+                --> 
+            </h2>
+
+            <h2>Using the Google Search Engine</h2>
+            <img th:src="@{./images/ABC.jpg}" alt="An image"> 
+            <a th:href="@{https://google.com/}">Google Search</a>
+
+            <h2>Model's attribute shows below</h2>
+            <p th:text="${message}">placeholder message</p> <!-- replace the "placeholder message" with ${message} from backend. -->
+
+            <h2>using th:each</h2>
+            <ul th:each="string : ${messages}">
+                <li th:text="${string}"></li>
+                <div th:object="${string}">
+                    <li th:text="*{charAt(1)}"></li>
+                </div>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
