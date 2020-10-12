@@ -269,7 +269,7 @@ All of its attributes are optional, but it's standard practice to always set at 
     </form>
 ```
 * ```<textarea>``` is the input feild for the multiline text feild.  if you want to define a default value for a ```<textarea>```, you put it between the opening and closing tags of the ```<textarea>``` element
-* Use of the ```for``` attribute on all ```<label>``` elements, which takes as its value the id of the form control with which it is associated — this is how you associate a form with its label. i.e. The ```<label>``` uses its ```for``` attributes to find out and match the same value ```id``` attribute in ```<input>```
+* Use of the ```for``` attribute on all ```<label>``` elements, which takes as its value the id of the form control with which it is associated — this is how you associate a form with its label. i.e. **The ```<label>``` uses its ```for``` attributes to find out and match the same value ```id``` attribute in ```<input>```**
 
 
 
