@@ -271,6 +271,54 @@ All of its attributes are optional, but it's standard practice to always set at 
 * ```<textarea>``` is the input feild for the multiline text feild.  if you want to define a default value for a ```<textarea>```, you put it between the opening and closing tags of the ```<textarea>``` element
 * Use of the ```for``` attribute on all ```<label>``` elements, which takes as its value the id of the form control with which it is associated — this is how you associate a form with its label. i.e. **The ```<label>``` uses its ```for``` attributes to find out and match the same value ```id``` attribute in ```<input>```**
 
+### Format 
+* ```<pre\>``` tags <br>
+Use ```<pre\>``` tag to persist the original formation of the context. e.g. <br>
+```
+<pre>
+  My Bonnie lies over the ocean.
 
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre>
+```
+will show  
+```
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+```
+
+<br>
+
+```<strong\>```, ```<em\>``` and ```<mark\>``` to make the wrapped words more obviously. 
+
+* ```<strong\>``` <br>
+    ```<p>We are the <strong>champion</strong>.</p>```shows We are the <strong>champion</strong>.
+* ```<em\>``` <br>
+    ```<p>We are the <em>champion</em>.</p>``` shows We are the <em>champion</em>.
+* ```<mark\>``` <br>
+    ```<p>We are the <mark>champion</mark>.</p>``` shows We are the <mark>champion</mark>, which the ```champion``` will be highlight. 
+* ```<sub\>``` <br>
+    ```<p>H<sub>2</sub>O</p>``` shows H<sub>2</sub>O. 
+* ```<del\>``` <br>
+    ```<p><del>H<sub>2</sub>O</del></p>``` shows <del>H<sub>2</sub>O</del>. 
+* ```<q\>```<br>
+    ```<p>I am so <q>cool</q>.</p>``` shows I am so <q>cool</q>.
+* ```<blockquote\>```<br>
+    ```<blockquote cite="https://google.com/">This is created by Google.</blockquote>``` shows <blockquote cite="https://google.com/">This is said by Google.</blockquote>
+
+
+### Links 
+* ```<a href="default.html" target="_blank" title="Home">This is goging to detault.html<a>``` will redirect the users to page ```default.html``` with new window and title is ```HOME```.
+
+### Images 
 
 [REFERENCE](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
