@@ -191,8 +191,8 @@ Adding the headers with ```<th>``` elements on tables.
 ```
     <table>
        <tr>
-         <th>&nbsp;</th>
-         <th>Col 1</th>
+         <th>&nbsp;</th>  
+         <th>Col 1</th>  <!-- use attribute colspan="num" to replace the &nbsp; --> 
          <th>Col 2</th>
          <th>Col 3</th>
        </tr>
@@ -210,6 +210,8 @@ Adding the headers with ```<th>``` elements on tables.
        </tr>
     </table>
 ```
+*The attribute ```colspan="2"``` means that span 2 column right to the element.*
+
 To add a description of the table elements, you need to put the tag ```<caption>``` under the ```<table>```. 
 ```
    <table>
