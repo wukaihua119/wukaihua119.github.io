@@ -69,7 +69,7 @@ From ```<h1>``` to ```<h6>```.
             <li>high</li>
         </ul>
 
-    ```
+    ``` 
 
 * ordered lists 
 
@@ -81,15 +81,24 @@ From ```<h1>``` to ```<h6>```.
             <li>medium</li>
             <li>high</li>
         </ol>
+    ``` 
+    You can use the attribute ```type``` in ```<ol\>``` to specify the type of the list. e.g. ```type="A"``` shows the ```A,B,C...```, ```type="a"``` shows the ```a,b,c...```, ```type="I"``` shows the ```I,II,III...``` and ```1,2,3,...``` by default. 
     ```
+         <ol type="A">
+            <li>low</li>
+            <li>medium</li>
+            <li>high</li>
+        </ol>
+    ```
+    will show 
+    ```
+        A. low
+        B. medium
+        C. high
+    ``` 
+### Indent - Description List 
+Use the ```<dl\>```, ```<dt\>``` and ```<dd\>``` to present the _Indent_ in HTML. <br>
 
-### Link 
-To add a link, using element ```<a>``` with attribute ```<href>``` to stand for *archor*. 
-```
-    <a href="https://google.com">Google Search</a>
-``` 
-
-### Description List 
 ```<dl/>``` is the *description list*, ```<dt/>``` is the *description title*, ```<dd/>``` is the *description description*. 
 ```
     <!-- description list -->
@@ -111,6 +120,33 @@ To add a link, using element ```<a>``` with attribute ```<href>``` to stand for 
         </dd>
     </dl>
 ``` 
+1. ```<dl\>``` means Definition List
+2. ```<dt\>```means Definition Term
+3. ```<dd\>```means Definition Description 
+
+```
+    <dl> 
+        <dt>Coffer</dt> 
+        <dd>- black hot drink
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl> 
+``` 
+shows 
+    <dl> 
+        <dt>Coffer</dt> 
+        <dd>- black hot drink
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl> 
+
+### Link 
+To add a link, using element ```<a>``` with attribute ```<href>``` to stand for *archor*. 
+```
+    <a href="https://google.com">Google Search</a>
+``` 
+
+
 
 ### Footer 
 ```
