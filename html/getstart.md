@@ -69,7 +69,7 @@ From ```<h1>``` to ```<h6>```.
             <li>high</li>
         </ul>
 
-    ```
+    ``` 
 
 * ordered lists 
 
@@ -81,15 +81,24 @@ From ```<h1>``` to ```<h6>```.
             <li>medium</li>
             <li>high</li>
         </ol>
+    ``` 
+    You can use the attribute ```type``` in ```<ol\>``` to specify the type of the list. e.g. ```type="A"``` shows the ```A,B,C...```, ```type="a"``` shows the ```a,b,c...```, ```type="I"``` shows the ```I,II,III...``` and ```1,2,3,...``` by default. 
     ```
+         <ol type="A">
+            <li>low</li>
+            <li>medium</li>
+            <li>high</li>
+        </ol>
+    ```
+    will show 
+    ```
+        A. low
+        B. medium
+        C. high
+    ``` 
+### Indent - Description List 
+Use the ```<dl\>```, ```<dt\>``` and ```<dd\>``` to present the _Indent_ in HTML. <br>
 
-### Link 
-To add a link, using element ```<a>``` with attribute ```<href>``` to stand for *archor*. 
-```
-    <a href="https://google.com">Google Search</a>
-``` 
-
-### Description List 
 ```<dl/>``` is the *description list*, ```<dt/>``` is the *description title*, ```<dd/>``` is the *description description*. 
 ```
     <!-- description list -->
@@ -111,6 +120,33 @@ To add a link, using element ```<a>``` with attribute ```<href>``` to stand for 
         </dd>
     </dl>
 ``` 
+1. ```<dl\>``` means Definition List
+2. ```<dt\>```means Definition Term
+3. ```<dd\>```means Definition Description 
+
+```
+    <dl> 
+        <dt>Coffer</dt> 
+        <dd>- black hot drink
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl> 
+``` 
+shows 
+    <dl> 
+        <dt>Coffer</dt> 
+        <dd>- black hot drink
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl> 
+
+### Link 
+To add a link, using element ```<a>``` with attribute ```<href>``` to stand for *archor*. 
+```
+    <a href="https://google.com">Google Search</a>
+``` 
+
+
 
 ### Footer 
 ```
@@ -191,8 +227,8 @@ Adding the headers with ```<th>``` elements on tables.
 ```
     <table>
        <tr>
-         <th>&nbsp;</th>
-         <th>Col 1</th>
+         <th>&nbsp;</th>  
+         <th>Col 1</th>  <!-- use attribute colspan="num" to replace the &nbsp; --> 
          <th>Col 2</th>
          <th>Col 3</th>
        </tr>
@@ -210,6 +246,8 @@ Adding the headers with ```<th>``` elements on tables.
        </tr>
     </table>
 ```
+*The attribute ```colspan="2"``` means that span 2 column right to the element.*
+
 To add a description of the table elements, you need to put the tag ```<caption>``` under the ```<table>```. 
 ```
    <table>
@@ -269,8 +307,56 @@ All of its attributes are optional, but it's standard practice to always set at 
     </form>
 ```
 * ```<textarea>``` is the input feild for the multiline text feild.  if you want to define a default value for a ```<textarea>```, you put it between the opening and closing tags of the ```<textarea>``` element
-* Use of the ```for``` attribute on all ```<label>``` elements, which takes as its value the id of the form control with which it is associated — this is how you associate a form with its label.
+* Use of the ```for``` attribute on all ```<label>``` elements, which takes as its value the id of the form control with which it is associated — this is how you associate a form with its label. i.e. **The ```<label>``` uses its ```for``` attributes to find out and match the same value ```id``` attribute in ```<input>```**
+
+### Format 
+* ```<pre\>``` tags <br>
+Use ```<pre\>``` tag to persist the original formation of the context. e.g. <br>
+```
+<pre>
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre>
+```
+will show  
+```
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+```
+
+<br>
+
+```<strong\>```, ```<em\>``` and ```<mark\>``` to make the wrapped words more obviously. 
+
+* ```<strong\>``` <br>
+    ```<p>We are the <strong>champion</strong>.</p>```shows We are the <strong>champion</strong>.
+* ```<em\>``` <br>
+    ```<p>We are the <em>champion</em>.</p>``` shows We are the <em>champion</em>.
+* ```<mark\>``` <br>
+    ```<p>We are the <mark>champion</mark>.</p>``` shows We are the <mark>champion</mark>, which the ```champion``` will be highlight. 
+* ```<sub\>``` <br>
+    ```<p>H<sub>2</sub>O</p>``` shows H<sub>2</sub>O. 
+* ```<del\>``` <br>
+    ```<p><del>H<sub>2</sub>O</del></p>``` shows <del>H<sub>2</sub>O</del>. 
+* ```<q\>```<br>
+    ```<p>I am so <q>cool</q>.</p>``` shows I am so <q>cool</q>.
+* ```<blockquote\>```<br>
+    ```<blockquote cite="https://google.com/">This is created by Google.</blockquote>``` shows <blockquote cite="https://google.com/">This is said by Google.</blockquote>
 
 
+### Links 
+* ```<a href="default.html" target="_blank" title="Home">This is goging to detault.html<a>``` will redirect the users to page ```default.html``` with new window and title is ```HOME```.
+
+### Images 
 
 [REFERENCE](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
